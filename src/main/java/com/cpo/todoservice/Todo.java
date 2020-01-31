@@ -10,15 +10,16 @@ public class Todo {
     @GeneratedValue
     private long id;
     private String description;
-    private Boolean finished;
+    private Boolean done;
 
     public Todo() {
 
     }
 
-    public Todo(long id, String description) {
+    public Todo(long id, String description, Boolean done) {
         this.id = id;
         this.description = description;
+        this.done = done;
     }
 
     public long getId() {
@@ -33,11 +34,11 @@ public class Todo {
         this.description  = description;
     }
 
-    public Boolean isFinished() {
-        return finished;
+    public Boolean getDone() {
+        return done;
     }
 
-    public void setFinish(Boolean finished) {
-        this.finished = finished;
+    public void setDone(Boolean done) {
+        this.done = done;
     }
 }
